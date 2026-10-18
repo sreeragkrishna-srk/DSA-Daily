@@ -1,0 +1,7 @@
+class Solution:
+  def rotateclockwise(self, arr, k):
+    n = len(arr)
+    k = k % n
+    if k == 0:
+      return
+    arr[:] = arr[n - k :] + arr[: n - k]
